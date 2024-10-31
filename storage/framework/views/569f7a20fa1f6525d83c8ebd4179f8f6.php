@@ -1,5 +1,5 @@
-<form action="{{ route('livro.store') }}" method="POST">
-    @csrf
+<form action="<?php echo e(route('livro.store')); ?>" method="POST">
+    <?php echo csrf_field(); ?>
     <div>
         <label for="nome">Título do Livro:</label>
         <input type="text" id="nome" name="nome" required />
@@ -16,3 +16,4 @@
         <button type="submit">Enviar</button>
     </div>
 </form>
+<?php /**PATH C:\Users\João\Biblioteca\resources\views/create_livros.blade.php ENDPATH**/ ?>

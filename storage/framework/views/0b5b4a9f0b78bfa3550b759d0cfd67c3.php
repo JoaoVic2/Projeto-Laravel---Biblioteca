@@ -1,5 +1,6 @@
-<form action="{{ route('livro.store') }}" method="POST">
-    @csrf
+<form action="<?php echo e(route('livro.update',['livro' => $livro->id])); ?>" method="POST">
+    <?php echo csrf_field(); ?>
+    <?php echo method_field('PUT'); ?>
     <div>
         <label for="nome">Título do Livro:</label>
         <input type="text" id="nome" name="nome" required />
@@ -13,6 +14,7 @@
         <textarea id="descricao" name="descricao" required></textarea>
     </div>
     <div class="button">
-        <button type="submit">Enviar</button>
+        <button type="submit">editar</button>
     </div>
 </form>
+<?php /**PATH C:\Users\João\Biblioteca\resources\views/edit_livro.blade.php ENDPATH**/ ?>
